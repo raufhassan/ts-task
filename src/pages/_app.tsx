@@ -4,7 +4,9 @@ import { ApolloProvider } from '@apollo/client'
 import type { AppProps } from 'next/app'
 
 export default function App({ Component, pageProps }: AppProps) {
-  <ApolloProvider client={client}>
-        <Component {...pageProps} />
-  </ApolloProvider>
+  return (
+    <ApolloProvider client={client}>
+      <Component {...pageProps} />
+    </ApolloProvider>
+  );
 }
